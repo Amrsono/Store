@@ -1,0 +1,17 @@
+C:\salem\src\Brio.Infrastructure\bin\Debug\net9.0\Brio.Infrastructure.deps.json
+C:\salem\src\Brio.Infrastructure\bin\Debug\net9.0\Brio.Infrastructure.dll
+C:\salem\src\Brio.Infrastructure\bin\Debug\net9.0\Brio.Infrastructure.pdb
+C:\salem\src\Brio.Infrastructure\bin\Debug\net9.0\Brio.Core.dll
+C:\salem\src\Brio.Infrastructure\bin\Debug\net9.0\Brio.Core.pdb
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.csproj.AssemblyReference.cache
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.AssemblyInfoInputs.cache
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.AssemblyInfo.cs
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.csproj.CoreCompileInputs.cache
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Inf.1A0587A5.Up2Date
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.dll
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\refint\Brio.Infrastructure.dll
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.pdb
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\ref\Brio.Infrastructure.dll
+C:\salem\src\Brio.Infrastructure\bin\Debug\net9.0\Brio.Infrastructure.runtimeconfig.json
+C:\salem\src\Brio.Infrastructure\obj\Debug\net9.0\Brio.Infrastructure.genruntimeconfig.cache

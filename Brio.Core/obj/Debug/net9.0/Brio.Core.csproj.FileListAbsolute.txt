@@ -1,0 +1,12 @@
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.AssemblyInfoInputs.cache
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.AssemblyInfo.cs
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.csproj.CoreCompileInputs.cache
+C:\salem\Brio.Core\bin\Debug\net9.0\Brio.Core.deps.json
+C:\salem\Brio.Core\bin\Debug\net9.0\Brio.Core.dll
+C:\salem\Brio.Core\bin\Debug\net9.0\Brio.Core.pdb
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.csproj.AssemblyReference.cache
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.dll
+C:\salem\Brio.Core\obj\Debug\net9.0\refint\Brio.Core.dll
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.pdb
+C:\salem\Brio.Core\obj\Debug\net9.0\ref\Brio.Core.dll
