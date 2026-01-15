@@ -168,3 +168,9 @@ C:\salem\Brio.Web\bin\Debug\net9.0\runtimes\win-arm\native\e_sqlite3.dll
 C:\salem\Brio.Web\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\salem\Brio.Web\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\salem\Brio.Web\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\salem\Brio.Web\bin\Debug\net9.0\package-lock.json
+C:\salem\Brio.Web\bin\Debug\net9.0\store-frontend\components.json
+C:\salem\Brio.Web\bin\Debug\net9.0\store-frontend\package-lock.json
+C:\salem\Brio.Web\bin\Debug\net9.0\store-frontend\package.json
+C:\salem\Brio.Web\bin\Debug\net9.0\store-frontend\tsconfig.json
+C:\salem\Brio.Web\obj\Debug\net9.0\Brio.Web.sourcelink.json

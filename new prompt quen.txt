@@ -1,0 +1,351 @@
+lets create now the front end with next.js and tailwind css and backend should be supabase , and all ui components with shadcn/ui and motion with framer motion and add some swiper.js carousels , block ,site map should be (home-about-products - contact) , create also user roles with one admin , admin will have an analytics dashboard shows statistics for daily sales , weekly and  monthly , method of payments will be cash only and shows paying by card as coming soon , create a nice shopping cart top of the line and modern 
+
+fullcode:
+
+Interactive mode, please enter your prompt
+> lets create now the front end with next.js and tailwind css and backend should be supabase , and all ui components with shadcn/ui and motion with framer motion and add some swiper.js carousels , block ,site map should be (home-about-products - contact) , create also user roles with one admin , admin will have an analytics dashboard shows statistics for daily sales , weekly and  monthly , method of payments will be cash only and shows paying by card as coming soon , create a nice shopping cart top of the line and modern
+🧠 Thinking...
+🤖 To build a high-quality web application that meets your requirements using Next.js and Supabase with Tailwind CSS, I'll guide you through each component and structure your app accordingly.
+
+### Step 1: Setting Up the Backend
+
+#### Step 1a: Set up a PostgreSQL Database with Supabase
+Suppose we have already set up `supabase` server and database connection. For simplicity's sake, let’s assume that we can run a sample Supabase API server to fetch data from the database.
+```bash
+# Run a sample Supabase API server
+supdb-server --config path_to_config.json >supdb.txt
+
+# Get the address of the Supabase instance:
+echo $PWD/supdb.txt | grep '^.*' | cut -d '://' -d '/'
+supdb_address='localhost:8000'
+```
+
+Create a table definition in Supabase:
+```sql
+CREATE DATABASE IF NOT EXISTS demo_db;
+USE demo_db;
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(64) NOT NULL
+);
+```
+
+#### Step 1b: Write TypeScript Type Definitions for Users, Roles, and Permissions
+Define types and interfaces at `src/types.ts`
+```typescript
+// types.ts
+declare namespace Types {
+    export const User = { type: 'User', id: string };
+    export interface Role extends Types.Role {
+        role: string;
+    }
+    export interface Permission {
+        permission: string;
+        enabled: boolean;
+    }
+}
+```
+
+#### Step 1c: Create the Model file (`models/users.ts`)
+Use TypeScript compiler to compile TypeScript code to JavaScript files:
+```bash
+npx @typescript-eslint/rule-checker src/models/users.ts --no-colors --show-warnings
+```
+
+Compile TypeScript to JavaScript:
+```bash
+npx ts-node --strict src/models/users.ts src/types.ts --out-file models/index.tsx
+```
+
+### Step 2: Frontend
+
+#### Step 2a: Design the Layout Components
+- `index.html`: The main component.
+- `App.js`: The main App component.
+- `Footer.js`: Footer component.
+- `TopBar.js`: Top Bar component.
+- `SearchBar.js`: Search bar component.
+- `CartItem.js`: Cart item component.
+- `Checkout.js`: Checkout component.
+- `CheckoutSummary.js`: Checkout summary component.
+- `CheckoutButton.js`: Checkout button component.
+- `Pagination.js`: Pagination component.
+- `Slider.js`: Slider component.
+- `SliderRow.js`: Slider row component.
+- `SliderItem.js`: Slider item component.
+- `Carousel.js`: Carousel component.
+- `CarouselItem.js`: Carousel item component.
+- `Container.js`: Container component.
+- `TabPane.js`: Tab pane component.
+- `Tabs.js`: Tabs component.
+- `Layout.js`: Layout component.
+
+#### Step 2b: Create Custom Elements and Styling Components
+- `ButtonComponent.js`: Button component
+- `CardComponent.js`: Card component
+- `DropdownComponent.js`: Dropdown component
+- `FormComponent.js`: Form component
+- `InputComponent.js`: Input component
+- `RadioGroupComponent.js`: Radio group component
+- `TextareaComponent.js`: Text area component
+- `TextAreaEditComponent.js`: Text area edit component
+- `TextFieldComponent.js`: TextField component
+
+#### Step 2c: Implement Custom Components with `@material-ui/react`
+
+**Custom Element Implementation**
+Add custom elements like `Button`, `Card`, `Grid`, etc. to the `React` libraries.
+
+**Styling Implementation**
+For custom elements, use CSS variables and classes provided by Material UI to define styles directly on them. For components that require additional styles (like buttons), ensure they are included via CSS in the HTML.
+
+**Custom Elements with Styles**
+
+**Button Component**:
+```tsx
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Button = ({ children, ...props }) => {
+  return <button {...props} style={{ backgroundColor: 'transparent', border: 'none', height: 'auto', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderRadius: '4px', padding: '3px 12px', boxSizing: 'border-box', outline: '0', transition: 'all .3s ease'; }}>{children}</button>;
+};
+
+export default Button;
+```
+
+**Custom CSS Variables**:
+```tsx
+declare var __CSS_VAR__: ${({ theme }) => ({
+  /* Style vars */
+  base: {},
+  '@page': {},
+  '@media': {},
+  '@screen': {},
+  "@maximal-width": {},
+  "@orientation": {},
+  "@orientation-variant-max-width": {},
+  "@orientation-variant-min-width": {},
+  "@orientation-variant-max-height": {},
+  "@orientation-variant-min-height": {},
+  "@orientation-variant-vertical-align": {},
+  "@orientation-variant-horizontal-align": {},
+  "@orientation-variant-fit": {}
+  /* Other style constants */
+
+}));
+```
+
+**CSS in `.css` Files**:
+```css
+/* Path to your CSS file */
+path/to/your/project/.css
+
+/* Your custom CSS variable */
+/* This is where you would write your own custom CSS variables */
+@media (max-width: 768px) {
+  /* Default layout */
+  * {
+    margin: 0 !important;
+  }
+
+  /* Fixed bottom boundary */
+  footer {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    padding: 0;
+  }
+
+  #site-map a {
+    display: inline-block;
+  }
+}
+
+/* Main content area */
+body {
+  margin-top: 100px;
+  background: white;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-height: calc(100% + 50px);  /* Adjust according to screen size */
+  min-width: 960px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: '';
+    clear: both;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+  }
+
+  nav ul li:hover {
+    color: black;
+  }
+
+  .navbar-brand {
+    font-size: 150%;
+    padding: 0;
+  }
+
+  .site-name, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Arial Black', "Helvetica", Helvetica, "sans-serif";
+    font-size: 150%;
+  }
+
+  .logo img {
+    margin-right: 10px;
+  }
+
+  div.navbar-item-container {
+    padding-bottom: 0;
+    box-sizing: content-box;
+  }
+
+  #header-menu {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #content-area {
+    max-width: 100%; /* Ensure there's enough space */
+    margin: 0;
+    padding: 0;
+    overflow-x: scroll;
+  }
+}
+
+/* Mobile view container */
+@media (max-width: 600px) {
+  body, html {
+    flex-direction: column;
+  }
+
+  iframe {
+    max-width: 100%; /* Align with mobile viewport size */
+  }
+
+  nav ul li a {
+    display: none;
+  }
+
+  #site-content-wrapper, iframe, video {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  #site-content, div#top-footer {
+    padding: 0;
+  }
+
+  div.site-search-button {
+    display: none;
+  }
+}
+```
+
+**CSS in CSS File**:
+```css
+/* Path to your CSS file */
+path/to/your-project/.css
+
+/* Your custom CSS variable */
+/* This is where you would write your own custom CSS variables */
+@media (max-width: 600px) {
+  .nav-link, a {
+    text-decoration: none;
+  }
+
+  div.footer {
+    padding: 0;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
+```
+
+**CSS in `.js` Files**:
+```javascript
+/* Path to your JS file */
+path/to/your-project/.js
+
+/* Your custom CSS variable */
+/* This is where you would write your own custom CSS variables */
+@keyframes start {
+  /* Animation Begins */
+}
+
+@keyframes stop {
+  /* Animation Ends */
+}
+
+/* Path to your stylesheet */
+path/to/your-project/.css
+
+/* Your custom CSS variable */
+/* This is where you would write your own custom CSS variables */
+@for_each (_element in _element-list) {
+  // Add styles to this element here based on custom properties or IDs
+
+  /* Animation Start */
+  ${start(_style)}
+
+  /* Animation End */
+  ${stop(_style)}
+}
+```
+
+### Step 3: Backend
+
+#### Step 3a: Setup RESTful API Server for Data Retrieval
+Run `supdb-server` again to fetch data from Supabase. Initialize an endpoint for managing users.
+
+#### Step 3b: Implement API Endpoints
+
+In `api/routes/index.js`:
+
+```javascript
+async function getUsers() {
+  const res = await fetch('/users');
+  const json = await res.json();
+  return Promise.resolve(json);
+}
+
+async function getUserById(id) {
+  const res = await fetch(`/users/${id}`);
+  const json = await res.json();
+  return Promise.resolve(json);
+}
+
+
+>
+Prompt cannot be empty
+> is that all the code?
+This model's maximum context length has been exceeded. Please start a new conversation.
+PS C:\WINDOWS\system32>
+Command	Description
+foundry service --help	Displays all available service-related commands and their usage.
+foundry service start	Starts the Foundry Local service.
+foundry service stop	Stops the Foundry Local service.
+foundry service restart	Restarts the Foundry Local service.
+foundry service status	Displays the current status of the Foundry Local service.
+foundry service ps	Lists all models currently loaded in the Foundry Local service.
+foundry service diag	Displays the logs of the Foundry Local service.
+foundry service set <options>	Sets the configuration of the Foundry Local service.
+
+Command	Description
+foundry cache --help	Shows all available cache-related commands and their usage.
+foundry cache location	Shows the current cache directory.
+foundry cache list	Lists all models stored in the local cache.
+foundry cache cd <path>	Changes the cache directory to the specified path.
+foundry cache remove <model>	Removes a model from the local cache.

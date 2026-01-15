@@ -10,3 +10,4 @@ C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.dll
 C:\salem\Brio.Core\obj\Debug\net9.0\refint\Brio.Core.dll
 C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.pdb
 C:\salem\Brio.Core\obj\Debug\net9.0\ref\Brio.Core.dll
+C:\salem\Brio.Core\obj\Debug\net9.0\Brio.Core.sourcelink.json
